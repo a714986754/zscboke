@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登陆页面</title>
+    <% include title %>
+  </head>
+  <body>
+    <div>
+        <form action="/users/login" method="post">                       
+          <div class="form-group"><label> 用户名：</label><input type="text" name="username" value="" placeholder="请输入用户名" class="form-control"></div>
+          <div class="form-group"><label>密码：</label> <input type="password" name="password" value="" placeholder="请输入密码" class="form-control"></div>
+            <input type="submit" name="" value="登录" class="btn btn-primary">           
+        </form>
+        <div>
+            没有账号？<a href="/register" value="">点击注册</a>
+        </div>
+    </div>
+  </body>
+</html>

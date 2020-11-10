@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>主页面</title>
+  <% include title %>
+</head>
+<body>
+  <nav class="navbar primary bg-info">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">首页</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><%=username%></a></li>
+          <li><a href="/main">写文章</a></li>
+          <li><a href="#">退出</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 表格内容 --> 
+    <% data.list.map(function(item,index){%>
+      <table class="table table-hover">
+    <tr>
+      <td class="active"><%= index+1%></td>
+      <td class="danger"><a href="/detailPage?id=<%=item.id%>"><%= item.title%></a></td>
+      <td class="warning"><%= item.time%></td>
+      <td class="danger"> <a href="main?id=<%=item.id%>&page=<%=data.currentPage%>">编辑</a> </td>
+      <td class="info"><a href="/article/delete?id=<%=item.id%>&page=<%=data.currentPage%>">删除</a> </td>
+    </tr>   
+  </table>
+  <%})%>
+  <div class="pages">
+    <% for(let i = 0;i < data.totle; i ++){%>
+    <a href="/?page=<%=i+1%>"><%= i+1 %></a>
+    <%}%>
+  </div>
+</body>
+</html>

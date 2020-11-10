@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>详情页面</title>
+    <% include title %>
+</head>
+<body>
+  
+    <nav class="navbar primary bg-info">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">首页</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><%=username%></a></li>
+              <li><a href="/main">写文章</a></li>
+              <li><a href="#">退出</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class='container'>
+       
+            <h1><%= data.title%></h1><br>
+            作者：<span><%=username%></span>&nbsp;
+            发布时间：<span><%= data.time%></span>
+            
+
+    </div>
+</body>
+</html>

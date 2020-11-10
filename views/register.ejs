@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>注册页面</title>
+    <% include title %>
+    
+  </head>
+  <body>
+    <div>
+        <form action="/users/register" method="post">                       
+          <div class="form-group"><label> 用户名：</label><input type="text" name="username" value="" placeholder="请输入用户名" class="form-control"></div>
+          <div class="form-group"><label>密码：</label> <input type="password" name="password" value="" placeholder="请输入密码" class="form-control"></div>
+            <div class="form-group"><label> 确认密码：</label> <input type="password" name="password2" value="" placeholder="请确认密码" class="form-control"></div>
+            <input type="submit" name="" value="注册" class="btn btn-primary">           
+        </form>
+        <div>
+            已有账号？<a href="/login" value="">点击登录</a>
+        </div>
+    </div>
+  </body>
+</html>
